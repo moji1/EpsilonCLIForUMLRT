@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src/main"/>
+	<classpathentry kind="lib" path="lib/jcommander-1.7.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.papyrusrt.codegen.cpp.profile_1.0.0.201707181457.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.papyrusrt.umlrt.profile_1.0.0.201707181432.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.papyrusrt.umlrt.system.profile.validation_1.0.0.201707181445.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml.profile.standard_1.0.100.v20170605-1616.jar"/>
+	<classpathentry kind="lib" path="lib/epsilon-1.4-kitchensink.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
