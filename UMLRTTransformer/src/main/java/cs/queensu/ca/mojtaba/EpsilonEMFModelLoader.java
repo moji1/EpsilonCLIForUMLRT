@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.tuple.MutablePair;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -17,7 +16,6 @@ import org.eclipse.epsilon.common.util.StringProperties;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 import org.eclipse.epsilon.eol.EolModule;
 import org.eclipse.epsilon.eol.exceptions.EolRuntimeException;
-import org.eclipse.epsilon.eol.exceptions.models.EolModelElementTypeNotFoundException;
 import org.eclipse.epsilon.eol.exceptions.models.EolModelLoadingException;
 import org.eclipse.epsilon.eol.models.IModel;
 import org.eclipse.epsilon.eol.models.IRelativePathResolver;
@@ -83,20 +81,12 @@ public class EpsilonEMFModelLoader {
 	    properties.put(EmfModel.PROPERTY_ALIASES, aliases);
 	    properties.put(EmfModel.PROPERTY_METAMODEL_URI, metamodel);
 	    properties.put(EmfModel.PROPERTY_MODEL_URI, "file:/" + new File(modelPath).getAbsolutePath());
-	   // properties.put(EmfModel.PROPERTY_MODEL_URI, uri);
 	  	properties.put(EmfModel.PROPERTY_READONLOAD, readOnLoad + "");
 	  	properties.put(EmfModel.PROPERTY_EXPAND, true + "");
 	  	properties.put(EmfModel.PROPERTY_STOREONDISPOSAL, storeOnDisposal + "");
 	    emfModel.load(properties, (IRelativePathResolver) null);
-	    defineURIMap(emfModel); 
 	    EcoreUtil.resolveAll(emfModel.getResource().getResourceSet());
-		/*for (EObject o :emfModel.allContents())
-				System.out.println(o.toString());*/
-
+	    System.out.println("Model " + "'"+ name+"'" + " is loaded from " + "'" +modelPath + "'");
 	    return emfModel;
-	}
-	// define URI map
-	protected void defineURIMap(EmfModel model) {
-		
 	}
 }

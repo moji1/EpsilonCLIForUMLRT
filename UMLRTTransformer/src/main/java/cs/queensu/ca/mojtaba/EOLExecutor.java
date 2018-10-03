@@ -33,7 +33,11 @@ public class EOLExecutor {
 	    	}
 	    	for (IModel m: models)
 	    		module.getContext().getModelRepository().addModel(m);
+	    	System.out.println("Executing EOL Scripts " + "'"+ this.scriptPath+"'" + " .....");
+	    	System.out.println("------Beginning of the script result--------");
 			module.execute();
+			System.out.println("------End of the script result--------");
+			//System.out.println("EOL Scripts " + "'"+ this.scriptPath+"'" + " is executed");
 		    module.getContext().getModelRepository().dispose();
 	    } catch (Exception e) {
 			// TODO Auto-generated catch block
