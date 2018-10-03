@@ -22,5 +22,5 @@ Usage: UMLRTTransformer [options]
     -language, -l     The language of the script (Optional, default is EOL) (default: EOL)
     -outplace         In outplace transformation mode, a new output model is created, default mode is outplace, (Optional) (default: true)
   * -script, -s       Path of epsilon script
-  * -umlrtmodel, -m   Path of UMLRTModel models and their alias e.g., m1:a1
+  * -umlrtmodel, -m   Path of UMLRTModel model and its alias e.g., m1:a1
   ```
