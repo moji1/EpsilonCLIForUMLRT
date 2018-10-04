@@ -8,8 +8,10 @@ Maven
 
 
 ## Build
+```
 cd UMLRTTransformer
 mvn clean package 
+```
 
 ## Run
 java -jar target/UMLRTTransformer-1.0-SNAPSHOT-jar-with-dependencies.jar
