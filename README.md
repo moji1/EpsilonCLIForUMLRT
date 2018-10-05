@@ -15,7 +15,7 @@ mvn clean package
 
 ## Run
 ```
-java -jar target/umlrttransformer-jar-with-dependencies.ja
+java -jar target/umlrttransformer-jar-with-dependencies.jar
 ```
 ```
 Usage: UMLRTTransformer [options]
