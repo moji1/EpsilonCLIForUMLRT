@@ -84,6 +84,7 @@ public class EpsilonEMFModelLoader {
 	  	properties.put(EmfModel.PROPERTY_READONLOAD, readOnLoad + "");
 	  	properties.put(EmfModel.PROPERTY_EXPAND, true + "");
 	  	properties.put(EmfModel.PROPERTY_STOREONDISPOSAL, storeOnDisposal + "");
+	  	properties.put(EmfModel.PROPERTY_CACHED, false + "");
 	    emfModel.load(properties, (IRelativePathResolver) null);
 	    EcoreUtil.resolveAll(emfModel.getResource().getResourceSet());
 	    System.out.println("Model " + "'"+ name+"'" + " is loaded from " + "'" +modelPath + "'");

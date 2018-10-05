@@ -4,7 +4,7 @@
   <groupId>cs.queensu.ca.mojtaba</groupId>
   <artifactId>UMLRTTransformer</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>UMLRTTransformer</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -68,6 +68,7 @@
                     <goal>single</goal>
                 </goals>
                 <configuration>
+                	<finalName>umlrttransformer</finalName>
                     <archive>
                       <manifest>
                           <mainClass>
@@ -78,6 +79,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <appendAssemblyId>true</appendAssemblyId>
                 </configuration>
             </execution>
           </executions>
@@ -89,7 +91,7 @@
       <dependency>
       <groupId>org.eclipse.epsilon</groupId>
       <artifactId>kitchensink</artifactId>
-      <version>1.4</version>
+      <version>1.5.1</version>
     </dependency>
      <dependency>
       <groupId>org.eclipse.papyrusrt</groupId>

@@ -24,6 +24,28 @@ operation  Any createCapsule(name:String) : UMLRTModel!Class {
 	var c:UMLRTModel!Class= new UMLRTModel!Class;
 	c.name=name;
 	self.packagedElement.add(c);
+	c.applyUMLRTStereotype(modelroot);
 	c.applyUMLRTCapsuleProperties(modelroot);
+	
 	return c;
+}
+
+/// capsule streotype
+operation UMLRTModel!Class applyUMLRTStereotype (umlrtModel:Any)  {
+	//self.println();
+	var s:UMLRTModel!Stereotype=self.getAppliedStereotypes().selectOne(s| s.name="Capsule");
+	//var ownedModel=self.owningModel;
+	//umlrtModel.profileApplication.appliedProfile.println("Inside UMLRTModel!Class applyUMLRTStereotype");
+	if (s.isUndefined()){
+		//var UMLRealTimeProfile = UMLRTModel!Package.all.select(c|c.name="UMLRealTime").first();
+		var UMLRealTimeProfile = umlrtModel.profileApplication.appliedProfile.selectOne(c|c.name="UMLRealTime");
+		var capsuleS:UMLRTModel!Stereotype= UMLRealTimeProfile.packagedElement.selectOne(s|s.name="Capsule");
+		capsuleS.println();
+		self.applyStereotype(capsuleS);
+		self.applyStereotype(capsuleS);
+		self.applyStereotype(capsuleS);
+		return capsuleS;
+		}
+	else 
+		return s;
 }

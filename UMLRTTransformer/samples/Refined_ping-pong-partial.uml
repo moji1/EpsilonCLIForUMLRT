@@ -52,6 +52,7 @@
         <end xmi:id="_K3L6kJACEeiDj9ZTCds5vg" partWithPort="_55qQUI5-Eeix1PpdEUB-wg" role="_2rCKUJABEeiDj9ZTCds5vg"/>
       </ownedConnector>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_l80XAMgcEei56M0UKV-41A" name="test"/>
     <profileApplication xmi:id="_07t3AI57Eeix1PpdEUB-wg">
       <eAnnotations xmi:id="_071y0I57Eeix1PpdEUB-wg" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/umlrt#/"/>
@@ -91,4 +92,8 @@
   <UMLRealTime:RTPort xmi:id="_5IsfkJABEeiDj9ZTCds5vg" base_Port="_5InnEJABEeiDj9ZTCds5vg"/>
   <UMLRealTime:RTConnector xmi:id="_K3NIsJACEeiDj9ZTCds5vg" base_Connector="_K25msJACEeiDj9ZTCds5vg"/>
   <RTCppProperties:CapsuleProperties xmi:id="_mlwywL1aEei9P6Eg9a8yoA" headerPreface="#include &quot;ExecRulesAnalyzer.hpp&quot;&#xA;#include &quot;RuleBodyExecutor.hpp&quot;&#xA;#include &quot;ExecContext.hpp&quot;&#xA;#include &quot;Config.hpp&quot;&#xA;#include &quot;Heap.hpp&quot;" base_Class="_FiI2sI58Eeix1PpdEUB-wg" privateDeclarations="    pmd::Heap heap;&#xA;    pmd::ExecRulesAnalyzer execRuleAnalyzer;&#xA;    pmd::RuleBodyExecutor ruleBodyExecutor;&#xA;    Config config;"/>
+  <UMLRealTime:Capsule xmi:id="_l91qsMgcEei56M0UKV-41A"/>
+  <UMLRealTime:Capsule xmi:id="_l958IMgcEei56M0UKV-41A"/>
+  <UMLRealTime:Capsule xmi:id="_l-ACwMgcEei56M0UKV-41A"/>
+  <RTCppProperties:CapsuleProperties xmi:id="_l-FiUMgcEei56M0UKV-41A"/>
 </xmi:XMI>

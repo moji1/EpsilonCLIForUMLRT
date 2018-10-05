@@ -59,8 +59,11 @@ public class ProgArgs {
 			File sourceFile= new File(modelsPathWithAlias.get(0).getKey());
 			String targetFilePath="/"+sourceFile.toPath().subpath(0, sourceFile.toPath().getNameCount()-1)+"/Refined_"+sourceFile.toPath().getFileName();
 			File targetFile= new File(targetFilePath);
+			if (targetFile.exists()) // it seems that option for copy does not work properly
+				targetFile.delete();
 			try {
 				Files.copy(sourceFile.toPath(),targetFile.toPath(),options);
+				//sourceFile.
 				modelsPathWithAlias.get(0).setLeft(targetFilePath);
 				EpsilonUMLRTModelLoader epsilonUMLRTModelLoader= new EpsilonUMLRTModelLoader(modelsPathWithAlias);
 				epsilonUMLRTModelLoader.loadModels();
